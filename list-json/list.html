@@ -12,6 +12,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie-edge">
     <meta name="description" content="lorem ipsum"> 
 	<title> Тест</title> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!-- jQuery 3.6.0 на 20.01.2022-->
    </head>
    <body>
          <!--
@@ -20,14 +21,14 @@
 1 до 5. Также нужна кнопка для отправки формы.
    -->
 
-    <form action="#" method="post">
-        <select>
+    <form onSubmit="submitForm(event)" class="form"> 
+        <select  name="Option">
             <option disabled>Выберите пункт</option>
             <option>Пункт 1</option>
             <option selected value="Пункт 2">Пункт 2</option>
         </select>
 
-        <select>
+        <select name="Color">
             <option disabled>Выберите цвет</option>
             <option>Белый</option>
             <option>Серый</option>
@@ -35,7 +36,7 @@
             <option selected value="Октарин">Октарин</option>
         </select>
 
-        <select>
+        <select name="Floor">
             <option disabled>Выберите покрытие для пола</option>
             <option>Цемент</option>
             <option>Плитка</option>
@@ -43,23 +44,31 @@
             <option selected value="Ковер">Ковер</option>
         </select>
 
-        <select>
+        <select  name="Genre">
             <option disabled>Выберите игровой жанр</option>
             <option selected value="RPG">RPG</option>
             <option>Шутер</option>
             <option>Стратегия</option>
         </select>
 
-        <select>
+        <select name="Animal">
             <option disabled>Кошки или собаки?</option>
             <option selected value="Кошки">Кошки</option>
             <option>Собаки</option>
         </select>
         <br>
-        <textarea rows="4" cols="50" placeholder="Расскажите, почему вы хотите работать в нашей компании?"></textarea>
+        <textarea rows="4" cols="50" placeholder="Расскажите, почему вы хотите работать в нашей компании?" name="Company"></textarea>
         <br>
-        <textarea rows="4" cols="50" placeholder="Ваш любимый анекдот?"></textarea>
+        <textarea rows="4" cols="50" placeholder="Ваш любимый анекдот?"  name="Joke"></textarea>
+        <br>
+        <button type="submit" class="submit">Отправить данные</button>
       
     </form>
-
+    <script src="list.js"></script>
    </body>
+
+
+  
+
+
+  
