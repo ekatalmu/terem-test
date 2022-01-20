@@ -1,7 +1,4 @@
    <!--
-2.4 Сделать в отдельном файле форму с 5 выпадающими списками и 2
-полями для ручного ввода информации. Списки должны содержать цифры от
-1 до 5. Также нужна кнопка для отправки формы.
 2.5 Сделать формирование JSON-структуры из данных формы. Выводить ее
 на экран под формой. Отправка формы не должна перезагружать страницу.
 2.6 Форма должна отправлять асинхронный GET-запрос к абстрактному
@@ -17,8 +14,51 @@
 	<title> Тест</title> 
    </head>
    <body>
+         <!--
+2.4 Сделать в отдельном файле форму с 5 выпадающими списками и 2
+полями для ручного ввода информации. Списки должны содержать цифры от
+1 до 5. Также нужна кнопка для отправки формы.
+   -->
 
-    <form action="#">
+    <form action="#" method="post">
+        <select>
+            <option disabled>Выберите пункт</option>
+            <option>Пункт 1</option>
+            <option selected value="Пункт 2">Пункт 2</option>
+        </select>
+
+        <select>
+            <option disabled>Выберите цвет</option>
+            <option>Белый</option>
+            <option>Серый</option>
+            <option>Черный</option>
+            <option selected value="Октарин">Октарин</option>
+        </select>
+
+        <select>
+            <option disabled>Выберите покрытие для пола</option>
+            <option>Цемент</option>
+            <option>Плитка</option>
+            <option>Ламинат</option>
+            <option selected value="Ковер">Ковер</option>
+        </select>
+
+        <select>
+            <option disabled>Выберите игровой жанр</option>
+            <option selected value="RPG">RPG</option>
+            <option>Шутер</option>
+            <option>Стратегия</option>
+        </select>
+
+        <select>
+            <option disabled>Кошки или собаки?</option>
+            <option selected value="Кошки">Кошки</option>
+            <option>Собаки</option>
+        </select>
+        <br>
+        <textarea rows="4" cols="50" placeholder="Расскажите, почему вы хотите работать в нашей компании?"></textarea>
+        <br>
+        <textarea rows="4" cols="50" placeholder="Ваш любимый анекдот?"></textarea>
       
     </form>
 
