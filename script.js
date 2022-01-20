@@ -39,5 +39,17 @@ buttonTwo.addEventListener('click', (event)=>{
         midMidBlock.classList.add('order-3')
     }
 })
+
+
+//для модального окна
+
+let makeModal = document.querySelector(".make-modal");
+var closeModal = document.querySelector(".close-modal");
+
+closeModal.onclick = function() {
+  makeModal.style.display = "none";
+}
+
+
 }
 
