@@ -7,8 +7,6 @@ window.onload = () => {
 let buttonOne = document.querySelector('.btn-warning');
 let h1Block = document.querySelector('.test-grid__top');
 
-
-
 buttonOne.addEventListener('click', (event) =>{
     if(h1Block.classList.contains('noDisplay')){
         h1Block.classList.remove('noDisplay')
@@ -16,6 +14,7 @@ buttonOne.addEventListener('click', (event) =>{
         h1Block.classList.add('noDisplay')
     }
 });
+
 
 // 2.2 При нажатии кнопки "Кнопка 2" средний блок во втором ряду должен
 // меняться местами с левым блоком. При повторном нажатии - возвращаться
@@ -25,8 +24,10 @@ let leftMidBlock = document.querySelector('.test-grid__middle-1');
 let midMidBlock = document.querySelector('.test-grid__middle-2');
 
 buttonTwo.addEventListener('click', (event)=>{
-//извиняюсь, через element.style.order = "2" получалось лишь поменять средний блок с левым, но не обратно
-//для быстрого решения пришлось наплодить классы
+// через element.style.order = "2" получалось лишь поменять средний блок с левым, но не обратно
+// для быстрого решения наплодила классы
+// лучше было бы обойти все циклом, в случае огромного кол-ва классов
+// решить ошибку с element.style.order
     if (leftMidBlock.classList.contains('order-2')){
         leftMidBlock.classList.remove('order-2');
         leftMidBlock.classList.add('order-3');
@@ -44,7 +45,7 @@ buttonTwo.addEventListener('click', (event)=>{
 //для модального окна
 
 let makeModal = document.querySelector(".make-modal");
-var closeModal = document.querySelector(".close-modal");
+let closeModal = document.querySelector(".close-modal");
 
 closeModal.onclick = function() {
   makeModal.style.display = "none";
